@@ -1,11 +1,11 @@
 # Multimodal Emotion Recognition (Assignment 2)
 
 ## 📌 Project Overview
-This project implements a multimodal emotion recognition system using the **TESS (Toronto emotional speech set)** dataset[cite: 26]. It classifies emotions into 7 categories (Angry, Disgust, Fear, Happy, Neutral, Pleasant Surprise, Sad) using three different approaches:
+This project implements a multimodal emotion recognition system using the **TESS (Toronto emotional speech set)** dataset. It classifies emotions into 7 categories (Angry, Disgust, Fear, Happy, Neutral, Pleasant Surprise, Sad) using three different approaches:
 
-1.  **Speech Pipeline:** Uses MFCC features processed by a 1D-CNN and LSTM[cite: 34, 37].
-2.  **Text Pipeline:** Uses transcriptions processed by Word Embeddings and LSTM[cite: 35, 38].
-3.  **Multimodal Fusion:** Uses a **Late Fusion** architecture to combine speech and text representations[cite: 39, 40].
+1.  **Speech Pipeline:** Uses MFCC features processed by a 1D-CNN and LSTM.
+2.  **Text Pipeline:** Uses transcriptions processed by Word Embeddings and LSTM.
+3.  **Multimodal Fusion:** Uses a **Late Fusion** architecture to combine speech and text representations.
 
 ---
 
@@ -17,10 +17,10 @@ This project implements a multimodal emotion recognition system using the **TESS
 ---
 
 ## 📂 Directory Structure
-* `models/speech_pipeline/`: Scripts for the Speech-only model (`train.py`, `test.py`) [cite: 47-49].
-* `models/text_pipeline/`: Scripts for the Text-only model (`train.py`, `test.py`) [cite: 50-52].
-* `models/fusion_pipeline/`: Scripts for the Fusion model (`train.py`, `test.py`) [cite: 53-56].
-* `Results/`: Contains generated accuracy plots and t-SNE cluster visualizations[cite: 57, 58].
+* `models/speech_pipeline/`: Scripts for the Speech-only model (`train.py`, `test.py`) .
+* `models/text_pipeline/`: Scripts for the Text-only model (`train.py`, `test.py`) .
+* `models/fusion_pipeline/`: Scripts for the Fusion model (`train.py`, `test.py`) .
+* `Results/`: Contains generated accuracy plots and t-SNE cluster visualizations.
 
 ---
 
