@@ -12,12 +12,11 @@ from tensorflow.keras.models import Model
 
 import os
 import sys
-# Get directory of this script
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Project Root
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-# Data Path (Assumed relative to project or hardcoded for submission context)
-# For this submission, we assume data is in a known location or relative
+
 DATA_PATH = r'/content/TESS_data/TESS Toronto emotional speech set data' 
 
 
@@ -32,9 +31,8 @@ if os.path.exists(DATA_PATH):
                 if l == 'ps': l = 'pleasant_surprise'
                 labels.append(l)
 
-    # Quick Feature Extraction (Subset for testing speed)
+   
     X = []
-    # Test on first 100 samples to demonstrate functionality
     for path in audio_paths[:100]: 
         y, sr = librosa.load(path, duration=2.5, sr=22050)
         mfcc = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=40)
@@ -48,8 +46,6 @@ if os.path.exists(DATA_PATH):
     le = LabelEncoder()
     y = to_categorical(le.fit_transform(labels[:100]))
     
-    # Mock Model Load (In real scenario, load_model('model.h5'))
-    # Rebuilding architecture for demo
     inputs = Input(shape=(100, 40))
     x = Conv1D(64, 3, activation='relu')(inputs)
     x = MaxPooling1D(2)(x)

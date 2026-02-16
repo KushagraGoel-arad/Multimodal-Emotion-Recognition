@@ -15,16 +15,15 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 import os
 import sys
-# Get the directory where this script is located
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Calculate Project Root (2 levels up: models/pipeline -> models -> project)
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-# Define Results Dir
+
 RESULTS_DIR = os.path.join(PROJECT_ROOT, 'Results')
 if not os.path.exists(RESULTS_DIR):
     os.makedirs(RESULTS_DIR)
 
-# DATA PATH (Hardcoded for Colab run, change if moving to local)
 DATA_PATH = r'/content/TESS_data/tess toronto emotional speech set data/TESS Toronto emotional speech set data'
 
 

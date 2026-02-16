@@ -12,12 +12,11 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 import os
 import sys
-# Get directory of this script
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Project Root
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-# Data Path (Assumed relative to project or hardcoded for submission context)
-# For this submission, we assume data is in a known location or relative
+
 DATA_PATH = r'/content/TESS_data/TESS Toronto emotional speech set data' 
 
 

@@ -12,16 +12,15 @@ from tensorflow.keras.models import Model
 
 import os
 import sys
-# Get the directory where this script is located
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Calculate Project Root (2 levels up: models/pipeline -> models -> project)
+
 PROJECT_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
-# Define Results Dir
+
 RESULTS_DIR = os.path.join(PROJECT_ROOT, 'Results')
 if not os.path.exists(RESULTS_DIR):
     os.makedirs(RESULTS_DIR)
 
-# DATA PATH (Hardcoded for Colab run, change if moving to local)
 DATA_PATH = r'/content/TESS_data/tess toronto emotional speech set data/TESS Toronto emotional speech set data'
 
 
@@ -61,7 +60,6 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 print("[Speech] Training (Real)...")
 history = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=5, batch_size=32, verbose=1)
 
-# Save Plot using ABSOLUTE PATH
 save_path = os.path.join(RESULTS_DIR, 'speech_accuracy.png')
 plt.figure()
 plt.plot(history.history['accuracy'], label='Train')
