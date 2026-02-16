@@ -1,5 +1,4 @@
-# Multimodal-Emotion-Recognition
-"""# Multimodal Emotion Recognition (Assignment 2)
+# Multimodal Emotion Recognition (Assignment 2)
 
 ## 📌 Project Overview
 This project implements a multimodal emotion recognition system using the **TESS (Toronto emotional speech set)** dataset[cite: 26]. It classifies emotions into 7 categories (Angry, Disgust, Fear, Happy, Neutral, Pleasant Surprise, Sad) using three different approaches:
@@ -48,4 +47,4 @@ The models were evaluated on an 80-20 train-test split.
 | **Multimodal (Fusion)** | **~99.1%** |
 
 *Note: The Fusion model achieves the highest accuracy by leveraging audio cues to disambiguate neutral text.*
-"""
+
