@@ -47,5 +47,6 @@ The models were evaluated on an 80-20 train-test split.
 | **Multimodal (Fusion)** | **~99.1%** |
 
 Text is confusing, Speech is clear, but Fusion is perfect.
+
 *Note: The Fusion model achieves the highest accuracy by leveraging audio cues to disambiguate neutral text.*
 
